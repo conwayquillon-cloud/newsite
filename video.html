@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Video</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      margin: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Random Video Page</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="video.html">Random Video</a>
+  </nav>
+  <div class="container">
+    <h2>Watch a Random Video</h2>
+    <iframe id="randomVideo" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <script>
+    const videos = [
+      'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      'https://www.youtube.com/embed/ysz5S6PUM-U',
+      'https://www.youtube.com/embed/tgbNymZ7vqY',
+      'https://www.youtube.com/embed/oHg5SJYRHA0'
+    ];
+    const randomIndex = Math.floor(Math.random() * videos.length);
+    document.getElementById('randomVideo').src = videos[randomIndex];
+  </script>
+</body>
+</html>
